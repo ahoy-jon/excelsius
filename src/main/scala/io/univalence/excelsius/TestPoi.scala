@@ -66,7 +66,8 @@ object TestPOI {
 
 
 
-  def toExcel[A](a:A, file:File)(implicit convertExcel: ConvertExcel[A]) = {
+
+  def toExcel[A](a:A, file:File)(implicit convertExcel: ConvertExcel[A]): Unit = {
 
 
 
@@ -241,7 +242,7 @@ object TestPOI {
 
     out.close()
 
-    //Desktop.getDesktop.open(file)
+    Desktop.getDesktop.open(file)
 
 
   }
